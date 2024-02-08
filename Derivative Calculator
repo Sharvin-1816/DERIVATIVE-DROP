@@ -1,0 +1,35 @@
+def calculating_Derivative(eqn1,b):
+    l3=[]
+    x1=b
+    for y in eqn1.split("+"):
+        try:
+            if y.index("x")!=0:
+                if y[y.index("x")-1].isnumeric()==True:
+                    l3.append(y.replace("x",f"*{b}"))
+                else:
+                    l3.append(str(b))
+            else:
+                l3.append(y.replace("x",str(b)))
+        except:
+                l3.append(y)
+    print(l3)
+    y1=eval("+".join(l3))
+    print(y1)
+    x2=x1-0.005
+    l4=[]
+    for y in eqn1.split("+"):
+        try:
+            if y.index("x")!=0:
+                if y[y.index("x")-1].isnumeric()==True:
+                    l4.append(y.replace("x",f"*{x2}"))
+                else:
+                    l4.append(str(x2))
+            else:
+                l4.append(y.replace("x",str(x2)))
+        except:
+                l4.append(y)
+
+    y2 = eval("+".join(l4))
+    slope = round((y1-y2)/(x1-x2))
+    print(slope)
+    return slope
