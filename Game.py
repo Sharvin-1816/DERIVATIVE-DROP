@@ -42,7 +42,7 @@ def draw_asteroid(expression_str, x, y, asteroid_image):
     # Blit text onto the screen at the center position
     screen.blit(text_surface, (text_x, text_y))
 
-asteroid_image = pygame.image.load(r"C:\Users\hp5cd\Downloads\asteroid2.png")
+asteroid_image = pygame.image.load(r"assets\asteroid2.png")
 
 # Function to generate a random mathematical expression
 def generate_expression():
@@ -146,7 +146,7 @@ color_inactive = pygame.Color('lightskyblue3')
 color_active = pygame.Color('dodgerblue2')
 color = color_inactive
 active = False
-bg = pygame.image.load(r"C:\Users\hp5cd\Downloads\SPACE THEME FINAL (2).png")
+bg = pygame.image.load(r"assets\SPACE THEME FINAL (2).png")
 
 expression = generate_expression()
 number = generate_point()
